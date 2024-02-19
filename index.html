@@ -3,13 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>javascript dom with projects</title>
+  <title>Bus Tickets</title>
   <!--daisy ui and tailwind css-->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!---->
+  <!-- raleway font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    .inter {
+      font-family: "Inter", sans-serif;
+    }
+
+    .raleway {
+      font-family: "Raleway", sans-serif;
+    }
+  </style>
 </head>
 <body>
-  
+  <header>
+    <!--navbar section-->
+    <nav class="container mx-auto w-11/12">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>                                         
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-4xl font-extrabold tracking-tight gap-0">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-lg">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>              
+          </ul>
+        </div>
+        <div class="navbar-end mt-4">        
+          <button class="bg-[#1DD1001A] flex px-[30px] py-3.5 rounded-xl">
+            <span class="text-[#1DD100] mr-4 text-lg">Bus</span> <img src="images/bus-icon.png" alt="">
+          </button>         
+        </div>
+      </div>
+    </nav>
+    <!--banner section-->
+    <section class="container mx-auto w-11/12 mt-9">
+      <div class="hero min-h-screen rounded-[32px]" style="background-image: url(images/banner.png);">
+        <div class="hero-overlay bg-opacity-10 bg-white"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="">
+            <h1 class="mb-5 text-6xl font-extrabold text-[#FFFFFF] leading-[86px]">End-to-End Travel with <br> <span class="text-[#1DD100]">
+              P-Paribahan</span>
+            </h1>
+            <p class="text-center mb-8 text-lg font-normal text-[#FFFFFF]">Basically, a bus ticket booking app is a mobile-based application functioning <br> through a centralized network management system.</p>
+            <button class="px-8 py-6 text-[#030712] text-xl font-bold rounded-xl bg-[#1DD100]">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </section> 
+  </header>
+  <!--coupon section-->
+  <section class="container mx-auto w-11/12 mt-9">
+    <h2 class="mt-[120px]  text-4xl font-bold text-center">Best offers for you</h2>
+    <div class="grid gap-4 grid-cols-2">
+      <!--15% offer-->
+      <div class="flex justify-between place-items-center w-full h-56 bg-[#FFBF0F] rounded-3xl mt-11 bg-no-repeat" >
+        <div class="ml-[51px] ">
+          <h2 class="font-bold text-[#030712CC] text-[40px] ">15% OFF</h2>
+          <h3 class=" text-xl text-[#030712CC] font-semibold">on your next purchase</h3>
+          <p class="text-lg text-[#03071280] font-medium">use by january 2024</p>
+        </div>
+        <img class="h-[224px]" src="images/cupon-devider.png" alt="">
+        <div class="mr-[52px]">
+          <h2 class="font-bold text-3xl text-[#030712]">NEW15</h2>
+          <p class="font-medium text-xl text-[#03071266]" >Coupon Code</p>
+        </div>
+      </div>
+      <!--20% offer-->
+      <div class="flex justify-between place-items-center w-full h-56 bg-[#F78C9C] rounded-3xl mt-11 bg-no-repeat" >
+        <div class="ml-[51px] ">
+          <h2 class="font-bold text-[#030712CC] text-[40px] ">20% OFF</h2>
+          <h3 class=" text-xl text-[#030712CC] font-semibold">on your next purchase</h3>
+          <p class="text-lg text-[#03071280] font-medium">use by january 2024</p>
+        </div>
+        <img class="h-[224px]" src="images/cupon-devider.png" alt="">
+        <div class="mr-[52px]">
+          <h2 class="font-bold text-3xl text-[#030712]">Couple 20</h2>
+          <p class="font-medium text-xl text-[#03071266]" >Coupon Code</p>
+        </div>
+      </div>     
+    </div>
+    <div class="text-center text-xl font-bold">
+      <button class="p-4 rounded-xl border-2 border-solid border-[#1DD100] mt-16 mb-[120px] mx-auto"><span class="text-[#1DD100]">See All Offers</span></button>
+    </div>
+  </section>
+  <!-- ticket buying section -->
+  <section class="bg-[#F7F8F8] border-t-2 border-[#1DD100] rounded-t-[88px]">
+    <!--Bus Information-->
+    <div class="container mx-auto w-11/12">
+      <h2 class="text-4xl font-bold text-center mb-6">P.H Paribahan</h2>
+      <p class="text-center mb-8 text-lg font-normal text-[#03071299]">Basically, a bus ticket booking app is a mobile-based application functioning <br> through a centralized network management system.</p>
+      <div class="flex justify-between place-items-center w-full mx-auto rounded-3xl pl-8 pr-[63px] mb-5 bg-[#FFFFFF]">
+          <div>
+            <!--bus and button-->
+            <div class="flex justify-between">             
+              <div class="flex">
+                <div>
+                  <img src="images/bus-logo.png" alt="">
+                </div>
+                <div class="ml-4">
+                  <h2 class="text-4xl font-bold mb-[15px]">Greenline Paribahan</h2>
+                  <p class="text-lg font-normal text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div>
+                <button class="bg-[#1DD1001A] flex px-[30px] py-3.5 rounded-xl">
+                  <img class="mr-6" src="images/seat-green.png" alt="">
+                  <span id="avialable-seats" class="text-[#1DD100] mr-4">8</span>
+                  <p class="text-[#1DD100] text-lg">Seats left</p>
+                </button>
+              </div>
+            </div>
+            <!--ticket form-->
+            <div class="bg-[#F7F8F8] rounded-3xl p-6 mt-4">
+              <div class="text-lg font-semibold mb-6 flex justify-between">
+                <p class=" text-[#03071299]">Route</p>
+                <h2 class=" text-[#030712]">Dhaka - Sylhet</h2>
+              </div>
+              <hr class="mb-6 border-dashed bg-[#03071233]">
+              <div class="text-lg font-semibold mb-6 flex justify-between">
+                <p class="text-[#03071299]">Departure Time</p>
+                <h3 class="text-[#030712]">9:00 PM</h3>
+              </div>
+              <hr class="mb-6 border-dashed bg-[#03071233]">
+              <div class="flex justify-between">
+                <button class="text-base font-medium bg-[#eaebec] rounded-xl px-4 py-3 mr-6">Boarding Point - Laxmipur</button>
+                <button class="text-base font-medium bg-[#eaebec] rounded-xl px-4 py-3 mr-6">Dropping Point - Bogura</button>
+                <button class="text-base font-medium bg-[#eaebec] rounded-xl px-7 py-3">Est. Time - 11 Hour</button>
+              </div>
+            </div>
+          </div>
+          <!--ticket per taka-->
+          <img src="images/info-devider.png" alt="">
+          <div>
+            <img class="mb-6" src="images/fare.png" alt="">
+            <h2 class="text-3xl font-bold text-[#030712]">550 Taka</h2>
+            <p class="text-2xl font-semibold text-[#03071299]">Per Seat</p>
+          </div>
+      </div>
+    </div>
+    <!--seats and buy ticket -->
+    <div class="bg-[#FFFFFF] container mx-auto w-11/12 rounded-3xl p-8 grid grid-cols-2 gap-8" >
+      <div>
+        <div>
+          <h2 class="mb-6 text-2xl font-semibold">Select Your Seat</h2>
+          <hr class="mb-4 border-dashed bg-[#03071233]">
+          <div class="flex justify-between">
+            <div class="flex">
+              <img src="images/seat-green.png" alt="">
+              <p class="ml-2 text-lg font-medium text-[#03071280]">Available</p>
+            </div>
+            <div class="flex">
+              <img src="images/seat-green-filled.png" alt="">
+              <p class="ml-2 text-lg font-medium text-[#1DD100] ">Selected</p>
+            </div>
+          </div>
+          <hr class="mt-4 border-dashed bg-[#03071233]">
+        </div>
+        <div class="flex justify-end mt-6 mb-6 "><img class="w-[97px]" src="images/Group 56@1x.png" alt=""></div>   
+        <!--select seats button-->
+        <div class=" flex justify-between">
+          <div class="grid grid-cols-2 gap-6">
+            <button id="a1" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">A1</span></button> 
+            <button id="a2" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">A2</span></button> 
+            <button id="b1" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">B1</span></button> 
+            <button id="b2" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">B2</span></button> 
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <button id="a3" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">A3</span></button> 
+            <button id="a4" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">A4</span></button> 
+            <button id="b3" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">B3</span></button> 
+            <button id="b4" class="bg-[#f7f8f8] px-10 py-2 rounded-xl "><span class="text-[#03071280] text-lg font-medium">B4</span></button> 
+          </div>    
+        </div>
+      </div>
+      <!-- <hr class="mb-4 rotate-90 w-[336px] mt-[167px] border-dashed bg-[#03071233]"> -->
+      <!--buy seats-->
+      <div>
+        <div>
+          <h2 class="mb-6  text-2xl font-semibold">Select Your Seat</h2>
+          <hr class="mb-4 border-dashed bg-[#03071233]">
+          <div class="bg-[#f7f8f8] p-6 rounded-xl">
+            <!--akane table-->
+            <section class="flex justify-between pb-4 border-b-2 border-dashed">
+              <h4 class="text-base font-medium">Seat<span id="count-seat">2</span></h4>
+              <h4 class="text-base font-medium">Class</h4>
+              <h4 class="text-base font-medium">Price</h4>
+            </section>
+            <!--total price-->
+            <div class="flex justify-between mt-4">
+              <h2 class="font-medium text-[#030712]">Total Price</h2>
+              <p class="font-medium text-[#030712]">BDT <span id="gross-price">0</span></p>
+            </div>
+            <!--coupon input-->
+            <div  id="coupon-box" class="bg-[#FFFFFF] rounded-xl mt-4 mb-5 flex justify-between py-3">
+              <input id="coupon-code" class="ml-5"  type="text" placeholder="have a coupon?" >
+              <button onclick="valid()" class="bg-[#1dd100] rounded-lg px-5 py-2 mr-5"><span class="text-[#FFFFFF] font-semibold">Apply</span></button>
+            </div>
+            <!--grand price-->
+            <div class="flex justify-between">
+              <h2 class="font-medium text-[#030712]">Grand Price</h2>
+              <p class="font-medium text-[#030712]">BDT <span id="net-price">0</span></p>
+            </div>       
+          </div>        
+        </div>
+        <div  class="bg-[#1dd100] rounded-lg px-5 py-2 mt-6 text-center">
+          <button><span class="text-[#FFFFFF] font-semibold">Next</span></button>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- javascript files -->
+  <script src="basic.js"></script>
 </body>
 </html>
